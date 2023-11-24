@@ -1,0 +1,37 @@
+.hero {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.hero-text h4 {
+  font-weight: 500;
+  color: #7c766b;
+  font-size: 2.1rem;
+}
+
+.hero-text h1 {
+  color: #7c766b;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+@media (max-width: 549px) {
+  .hero-text h4 {
+    font-size: 1.2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,151 @@
+.carousel {
+  min-height: 60vh;
+  background-color: #ece3d3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-food-recommendation {
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+}
+
+.carousel-indicators {
+  padding-bottom: 2.5em;
+}
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #000 !important;
+  border: none;
+}
+
+/* Style the active indicator */
+.carousel-indicators .active {
+  background-color: #000 !important;
+}
+.text-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  position: relative;
+  padding: 0em 10em 3em 10em;
+}
+
+.text-carousel h4 {
+  font-weight: 700;
+  color: #000;
+}
+
+.text-carousel a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.text-carousel a:hover {
+  text-decoration: underline;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+  /* flex-wrap: wrap;
+  display: flex; */
+  gap: 3em;
+}
+
+.card {
+  width: 50vh;
+  height: 22vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 40px 40px 40px 40px;
+  background-color: #fff;
+  /* Optional: Add a box shadow for a subtle effect */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  gap: 1.4em;
+}
+
+.card-body img {
+  object-fit: cover;
+}
+
+.card-body-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.card-body-details h5 {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.type-of-food {
+  background-color: rgb(233, 227, 236);
+  color: #522a68;
+  padding: 0.2em 0.8em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.dose-detail {
+  display: flex;
+  gap: 0.4em;
+}
+
+.weight-detail {
+  display: flex;
+  gap: 0.4em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #4a4848;
+  opacity: 0.5;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin: 0 3em;
+  top: 55%;
+  transform: translateY(-55%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.like {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: rgb(255, 227, 223);
+  margin-left: 0.7em;
+}
+
+.like i {
+  color: #ff5a44;
+}
+
+.like.liked {
+  color: #ff5a44;
+}

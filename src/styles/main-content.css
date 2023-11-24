@@ -1,0 +1,136 @@
+#main-content {
+  background-color: #fffcf5;
+  min-height: 100vh;
+  padding-top: 7em;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+}
+
+#main-content h3 {
+  color: #eb450b;
+  font-weight: 600;
+  padding-bottom: 2em;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.button-cta {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  padding-bottom: 5em;
+}
+
+.button-cta button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #eb450b;
+  outline: none;
+  border: 1px solid #eb450b;
+}
+
+.button-cta button:hover {
+  transform: scale(1.2);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.2s ease;
+}
+
+.row-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15em;
+  gap: 5.5em;
+  transition: opacity 0.5s ease; 
+  opacity: 1;
+}
+
+.row-content.fade-out {
+  opacity: 0;
+  pointer-events: none; 
+}
+
+.row-content img {
+  width: 60vh;
+  height: 45vh;
+  transition: opacity 0.5s ease;
+}
+
+.row-content.fade-out img {
+  opacity: 0;
+}
+
+/* Styles for the first content */
+.row-content1 img {
+  width: 60vh;
+  height: 45vh;
+}
+
+/* Styles for the second content */
+.row-content2 img {
+  width: 60vh;
+  height: 33vh;
+}
+
+/* Styles for the third content */
+.row-content3 img {
+  width: 60vh;
+  height: 45vh;
+}
+
+/* Styles for the fourth content */
+.row-content4 img {
+  width: 60vh;
+  height: 40vh;
+}
+
+.row-content .content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  width: 60vh;
+  transition: opacity 0.5s ease;
+}
+
+.row-content.fade-out .content-text {
+  opacity: 0;
+}
+
+.content-text h2{
+  color: #522a68;
+  font-weight: 700;
+  font-size: 2.7rem;
+}
+
+.content-text p{
+  font-weight: 500;
+  color: #7C766B;
+  font-size: 1.4rem;
+  line-height: 40px;
+}
+
+.content-text .btn-cta-anchor{
+  padding: 1em 0em;
+}
+
+.content-text a  {
+  background-color: #522a68;
+  padding: 0.7em 1em;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+  box-shadow 0.2s ease;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.content-text a:hover {
+  background-color: #67458d;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

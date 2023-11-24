@@ -1,0 +1,179 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 3em;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+
+/* Menambahkan box shadow pada hover */
+#navbar:hover {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transition: 0.3s ease;
+}
+
+#nav-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #5e4c88;
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+#nav-header span {
+  color: #bc9892;
+  font-weight: 400;
+}
+
+#nav-header img {
+  width: 95px;
+  height: 95px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#hamburger-button {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+.navbar-nav .list {
+  display: flex;
+}
+
+.list a {
+  text-decoration: none;
+  color: #aba798;
+  font-weight: 500;
+  padding: 1em;
+  font-size: 1.2rem;
+}
+
+.list #btn-login {
+  display: none;
+}
+
+.list #btn-regis {
+  display: none;
+}
+
+.list a:hover {
+  color: #5e4c88;
+}
+
+.extra {
+  display: flex;
+  gap: 0.7em;
+}
+
+.extra a {
+  border-radius: 10px 10px 10px 10px;
+  padding: 0.4em 1.2em;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.extra #btn-login {
+  background-color: #7c766b;
+  color: #fff;
+  border: 1px solid #7c766b;
+  font-weight: 500;
+}
+
+.extra #btn-login:hover {
+  background-color: #fff;
+  color: #7c766b;
+  transition: 0.2s ease;
+}
+
+.extra #btn-regis {
+  background-color: #fff;
+  color: #7c766b;
+  border: 1px solid #7c766b;
+  font-weight: 500;
+}
+
+.extra #btn-regis:hover {
+  background-color: #7c766b;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+/* toggle offcanvas */
+@media (max-width: 520px) {
+  #navbar {
+    padding: 1em;
+  }
+
+  #hamburger-button {
+    display: block;
+    padding-left: 5em;
+  }
+
+  .navbar-nav .list {
+    right: -100%;
+    top: 90%;
+    position: absolute;
+    background-color: #fff;
+    height: 100vh;
+    width: 17em;
+    display: flex;
+    flex-direction: column;
+    padding: 0em 0 0 1em;
+    transition: 0.3s;
+    gap: 1em;
+    /* position: fixed; */
+  }
+
+  .list a {
+    color: #000;
+  }
+
+  .list #btn-login {
+    display: block;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0.5em;
+    width: 5em;
+    margin-left: 1em;
+    text-align: center;
+    background-color: #7c766b;
+    color: #fff;
+  }
+
+  .list #btn-regis {
+    display: block;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0.5em;
+    width: 5em;
+    margin-left: 1em;
+    text-align: center;
+    background-color: #fff;
+    color: #7c766b;
+    border: 1px solid #7c766b;
+  }
+
+  .navbar-nav .list.active {
+    right: 0%;
+  }
+
+  .extra {
+    display: none;
+    gap: 0.7em;
+  }
+}

@@ -1,0 +1,36 @@
+.footer-container{
+     background-color: #504C46;
+     width: 100%;
+}
+
+.footer-content{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 1em 6em;
+}
+
+#footer-icon{
+     width: 15vh;
+}
+
+#media-img{
+     width: 6vh;
+}
+
+.footer-nav{
+    display: flex;
+    padding:1em;
+    gap: 2em;
+}
+
+.footer-nav a{
+     padding: 1em 0em;
+     font-size: 1.1rem;
+     color: #fff;
+     text-decoration: none;
+}
+
+.footer-nav a:hover{
+     text-decoration: underline;
+}
