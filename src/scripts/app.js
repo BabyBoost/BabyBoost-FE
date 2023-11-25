@@ -3,6 +3,8 @@ import UrlParser from './routes/url-parser';
 import DrawerInitiator from './utils/drawer-toggle';
 import btnInitiator from './utils/go-to-topBtn-initiator';
 import LandingPage from './view/pages/landing-page';
+import LoginPage from './view/pages/auth/login-page';
+import RegisterPage from './view/pages/auth/register-page';
 
 class Main {
   constructor({
@@ -16,23 +18,19 @@ class Main {
 
     this.InitialAppShell();
     this.renderPage();
-
-    this._landingPage = new LandingPage();
-    this._landingPage.initializeBtnDynamicContentListener();
-    this._landingPage.initializeLikeButton();
   }
 
   InitialAppShell() {
     DrawerInitiator.init({
       navbarList: this._navbarList,
-      hambuergerBtn: this._hamburgerBtn,
+      hamburgerBtn: this._hamburgerBtn,
     });
     btnInitiator.init({
       goToTopBtn: this._goToToBtn,
     });
   }
 
-  async renderPage() {
+  renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const Page = routes[url];
 
@@ -40,6 +38,20 @@ class Main {
       const page = new Page();
       this._content.innerHTML = '';
       this._content.appendChild(page._render());
+
+      if (url === '/login') {
+        const loginPage = new LoginPage();
+        loginPage._setupEventListeners();
+      }
+      if (url === '/daftar') {
+        const registerPage = new RegisterPage();
+        registerPage._setupEventListeners();
+      }
+      if (url === '/') {
+        const landingPage = new LandingPage();
+        landingPage.initializeBtnDynamicContentListener();
+        landingPage.initializeLikeButton();
+      }
     }
   }
 }
