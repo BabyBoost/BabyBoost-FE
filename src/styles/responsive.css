@@ -1,0 +1,32 @@
+@media (max-width: 1650px) {
+  html {
+    font-size: 88%;
+  }
+
+  #main-content {
+    padding-top: 5em;
+  }
+
+  .hero .hero-text {
+    padding-top: 9.5em;
+  }
+
+  .row-content .content-text {
+    gap: 1em;
+    width: 50%;
+  }
+
+  .card-body {
+    padding: 1em 1em;
+  }
+
+  .card-body img {
+    width: 15vh;
+  }
+}
+
+@media (max-width: 1368px) {
+  html {
+    font-size: 81%;
+  }
+}
