@@ -4,6 +4,8 @@ class LoginPage {
   }
 
   _render() {
+    document.title = 'BabyBoost - Masuk & Daftar';
+
     const loginContainer = document.createElement('div');
     loginContainer.className = 'login-container';
     loginContainer.innerHTML = `

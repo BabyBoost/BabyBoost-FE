@@ -3,7 +3,7 @@ const btnInitiator = {
     window.addEventListener('scroll', () => {
       const scrollHeight = window.scrollY;
 
-      const scrollThreshold = 600;
+      const scrollThreshold = 800;
 
       if (scrollHeight > scrollThreshold) {
         goToTopBtn.classList.add('scrolled');

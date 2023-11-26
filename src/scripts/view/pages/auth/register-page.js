@@ -4,6 +4,8 @@ class RegisterPage {
   }
 
   _render() {
+    document.title = 'BabyBoost - Masuk & Daftar';
+
     const registerContainer = document.createElement('div');
     registerContainer.className = 'regis-container';
     registerContainer.innerHTML = `

@@ -14,10 +14,9 @@ class Main {
     this._hamburgerBtn = hamburgerBtn;
     this._content = content;
     this._navbar = navbar;
-    this._goToToBtn = goToTopBtn,
+    this._goToToBtn = goToTopBtn;
 
     this.InitialAppShell();
-    this.renderPage();
   }
 
   InitialAppShell() {

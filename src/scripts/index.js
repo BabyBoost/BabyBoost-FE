@@ -14,8 +14,7 @@ window.addEventListener('hashchange', () => {
   window.scrollTo(0, 0);
 });
 
-// window.addEventListener('load', async () => {
-//   app.loadingProgress();
-//   app.renderPage();
-//   swRegister();
-// });
+window.addEventListener('load', async () => {
+  app.renderPage();
+  // swRegister();
+});

@@ -7,6 +7,14 @@ class LandingPage {
   }
 
   _render() {
+    document.title = 'BabyBoost - Saatnya Penuhi Gizi Anak Sekarang!';
+
+    const navbar = document.getElementById('navbar');
+    navbar.style.display = 'flex';
+
+    const footer = document.querySelector('.footer-container');
+    footer.style.display = 'block';
+
     const content = document.createElement('div');
     content.className = 'content-container';
     content.innerHTML = `
@@ -302,7 +310,7 @@ class LandingPage {
           <h3>Bersama BabyBoost, Ayo Mulai Penuhi Gizi Anak Sekarang!</h3>
           <p>Yuk bergabung di BabyBoost, untuk memantau pertumbuhan gizi anak secara praktis dan informatif. Mari kita bersama-sama memberikan yang terbaik untuk masa depan si kecil!</p>
           <div class= "btn-reg">
-            <a href="#">Daftar</a>
+            <a href="#/daftar">Daftar</a>
           </div>
         </div>
       </section>
