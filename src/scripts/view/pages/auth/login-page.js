@@ -1,5 +1,9 @@
+import LoadingCircle from '../../../utils/loading';
+
+/* eslint-disable prefer-destructuring */
 class LoginPage {
   constructor() {
+    this._onLoginSuccess = null;
     this._render();
   }
 
@@ -54,11 +58,25 @@ class LoginPage {
     return loginContainer;
   }
 
+  /**
+   * @param {(username: any) => void} callback
+   */
+  set onLoginSuccess(callback) {
+    this._onLoginSuccess = callback;
+  }
+
   _setupEventListeners() {
+    const loginForm = document.getElementById('login-form');
+
     const showPasswordIcon = document.getElementById('showPasswordIcon');
     const passwordInput = document.getElementById('password');
 
     showPasswordIcon.style.display = 'none';
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this._handleLogin();
+    });
 
     passwordInput.addEventListener('input', () => {
       this._toggleShowPasswordIconVisibility(passwordInput, showPasswordIcon);
@@ -69,6 +87,54 @@ class LoginPage {
     });
   }
 
+  async _handleLogin() {
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    const loadingIndicator = new LoadingCircle();
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    try {
+      loadingIndicator.show();
+
+      const response = await fetch('http://localhost:3000/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        const fullname = data.user.fullname;
+        localStorage.setItem('accessToken', data.accessToken);
+        localStorage.setItem('fullname', fullname);
+
+        if (this._onLoginSuccess) {
+          this._onLoginSuccess(fullname);
+        }
+
+        window.location.href = '/#/';
+      } else {
+        const wrongCredentialTxt = document.querySelector('.wrong-credential-txt');
+        wrongCredentialTxt.style.visibility = 'visible';
+
+        const passwordInput = document.getElementById('password');
+        passwordInput.style.border = '1px solid #FF0000';
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('Terjadi kesalahan selama login');
+    } finally {
+      loadingIndicator.hide();
+    }
+  }
+
+  // -----------------------------------------------  Additional Utility -------------------------------------------------------//
   _toggleShowPasswordIconVisibility(passwordInput, showPasswordIcon) {
     const isPasswordEmpty = passwordInput.value.trim() === '';
     showPasswordIcon.style.display = isPasswordEmpty ? 'none' : 'inline';
