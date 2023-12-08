@@ -27,7 +27,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.2rem;
   text-decoration: none;
   color: #5e4c88;
   font-weight: 700;
@@ -79,10 +78,6 @@ form {
   outline: none;
 }
 
-.form-group input:hover {
-  outline: 1px solid #411f53;
-}
-
 .password-input-container {
   position: relative;
   display: flex;
@@ -98,11 +93,6 @@ form {
   font-size: 20px;
   user-select: none;
   margin-left: 1em;
-}
-
-.wrong-credential-txt {
-  display: none;
-  color: red;
 }
 
 .form-group-row {
@@ -161,11 +151,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #EB450B;
+  color: #eb450b;
   font-weight: 600;
 }
 
-.group-button-register a{
+.group-button-register a {
   border-radius: 10px 10px 10px 10px;
   border: 1px solid #522a68;
   color: #522a68;
@@ -175,13 +165,17 @@ form {
   padding: 0.7em 4.2em;
 }
 
-.group-button-register a:hover{
+.group-button-register a:hover {
   color: #fff;
   background-color: #522a68;
   transition: 0.2s ease;
 }
 
-/* register form */
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
 .regis-container {
   position: relative;
   background-color: rgb(233, 226, 214);
@@ -189,7 +183,7 @@ form {
 
 .regis-content-container {
   display: flex;
-  height: 116vh;
+  height: 135vh;
   background-repeat: no-repeat;
   justify-content: end;
   padding-top: 7.8em;
@@ -224,12 +218,107 @@ form {
   font-weight: 600;
 }
 
-#register-button:hover{
+#register-button:hover {
   background-color: #fff;
   color: #522a68;
 }
 
+.wrong-credential-txt {
+  visibility: hidden;
+  color: #ff0000;
+}
 
+.same-email-indicators {
+  display: none;
+  color: #ff0000;
+}
+
+.char-indicator {
+  display: none;
+  color: #ff0000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.char-indicator span {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.indicator-password {
+  height: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.indicator-password span {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: lightgrey;
+  border-radius: 5px;
+}
+
+.indicator-password span:nth-child(2) {
+  margin: 0 3px;
+}
+
+.indicator-password span.active:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.indicator-password span.weak:before {
+  background-color: #ff4757;
+}
+.indicator-password span.medium:before {
+  background-color: orange;
+}
+
+.indicator-password span.strong:before {
+  background-color: #23ad5c;
+}
+
+.txt-indicator-password {
+  font-size: 1rem;
+  font-weight: 500;
+  display: none;
+  margin-bottom: -10px;
+  padding-bottom: 1em;
+}
+
+.txt-indicator-password.weak {
+  color: #ff4757;
+}
+
+.txt-indicator-password.medium {
+  color: orange;
+}
+
+.txt-indicator-password.strong {
+  color: #23ad5c;
+}
+
+
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
 input[type="checkbox"] {
   /* Menghilangkan default browser styles */
   -webkit-appearance: none;

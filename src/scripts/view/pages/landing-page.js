@@ -9,19 +9,16 @@ class LandingPage {
   _render() {
     document.title = 'BabyBoost - Saatnya Penuhi Gizi Anak Sekarang!';
 
-    const navbar = document.getElementById('navbar');
-    navbar.style.display = 'flex';
-
-    const footer = document.querySelector('.footer-container');
-    footer.style.display = 'block';
-
     const content = document.createElement('div');
     content.className = 'content-container';
     content.innerHTML = `
-      <section class="hero" style="background-image: url(./images/header-bg.jpg)">
+      <section class="hero" style="background-image: url(./images/bg-hero.png)">
         <div class="hero-text">
           <h4>Jaga Asupan Gizi Anak Bersama</h4>
           <h1>BabyBoost</h1>
+        </div>
+        <div class="hero-img">
+          <img src="./images/Kids.png" alt="hero-img">
         </div>
       </section>
 
@@ -31,7 +28,6 @@ class LandingPage {
           <button id="cta-1">1</button>
           <button id="cta-2">2</button>
           <button id="cta-3">3</button>
-          <button id="cta-4">4</button>
         </div>
         <div class="row-content" id="dynamic-content">
         <img data-src="./images/img-content-1.png" alt="img-content-1" class="lazyload"/>
@@ -42,7 +38,7 @@ class LandingPage {
             memberikan rekomendasi bahan makanan yang disertai informasi gizi
           </p>
           <div class="btn-cta-anchor">
-            <a href="#" id="cta-content-1">
+            <a href="#/kalkulator-gizi" id="cta-content-1">
               Kalkulator Gizi &#8599;
             </a>
           </div>

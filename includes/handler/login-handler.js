@@ -35,7 +35,7 @@ loginRouter.post('/login', async (req, res) => {
 
     // Pass user information as the payload
     const accessToken = jwt.sign({ userId: user.id, fullname: user.fullname }, jwtSecret, {
-      expiresIn: '1h',
+      expiresIn: '24h',
     });
 
     res.json({

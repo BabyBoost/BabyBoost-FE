@@ -48,13 +48,13 @@
   justify-content: center;
   padding: 0em 15em;
   gap: 5.5em;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
   opacity: 1;
 }
 
 .row-content.fade-out {
   opacity: 0;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .row-content img {
@@ -76,17 +76,11 @@
 /* Styles for the second content */
 .row-content2 img {
   width: 60vh;
-  height: 33vh;
+  height: 45vh;
 }
 
 /* Styles for the third content */
 .row-content3 img {
-  width: 60vh;
-  height: 45vh;
-}
-
-/* Styles for the fourth content */
-.row-content4 img {
   width: 60vh;
   height: 40vh;
 }
@@ -103,31 +97,31 @@
   opacity: 0;
 }
 
-.content-text h2{
+.content-text h2 {
   color: #522a68;
   font-weight: 700;
   font-size: 2.7rem;
 }
 
-.content-text p{
+.content-text p {
   font-weight: 500;
-  color: #7C766B;
+  color: #7c766b;
   font-size: 1.4rem;
   line-height: 40px;
 }
 
-.content-text .btn-cta-anchor{
+.content-text .btn-cta-anchor {
   padding: 1em 0em;
 }
 
-.content-text a  {
+.content-text a {
   background-color: #522a68;
   padding: 0.7em 1em;
   color: #fff;
   border: none;
   border-radius: 10px;
   transition: background-color 0.2s ease, transform 0.2s ease,
-  box-shadow 0.2s ease;
+    box-shadow 0.2s ease;
   font-size: 1.2rem;
   text-decoration: none;
 }

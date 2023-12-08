@@ -3,6 +3,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  padding: 1em;
+}
+
+.hero-img img {
+  width: 100%;
 }
 
 .hero .hero-text {

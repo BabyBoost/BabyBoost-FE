@@ -113,12 +113,13 @@ class LoginPage {
         const fullname = data.user.fullname;
         localStorage.setItem('accessToken', data.accessToken);
         localStorage.setItem('fullname', fullname);
+        localStorage.setItem('userId', data.user.id);
 
         if (this._onLoginSuccess) {
           this._onLoginSuccess(fullname);
         }
 
-        window.location.href = '/#/';
+        window.location.href = '/#/form-input';
       } else {
         const wrongCredentialTxt = document.querySelector('.wrong-credential-txt');
         wrongCredentialTxt.style.visibility = 'visible';

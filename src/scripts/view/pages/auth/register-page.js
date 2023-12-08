@@ -30,7 +30,7 @@ class RegisterPage {
                     </div>
                     <div class="form-group">
                          <label for="namaProfile">Nama Profile<span></span></label>
-                         <input type="text" id="namaProfile" name="namaProfile" placeholder="E.g. John Doe"required />
+                         <input type="text" id="namaProfile" name="namaProfile" placeholder="E.g. Abid Rizmi"required />
                          <span class="char-indicator"></span>
                     </div>
                     <div class="form-group">

@@ -6,6 +6,9 @@
   #main-content {
     padding-top: 5em;
   }
+  #navbar{
+    padding: 0.7em 3em;
+  }
 
   .hero .hero-text {
     padding-top: 9.5em;
@@ -23,10 +26,111 @@
   .card-body img {
     width: 15vh;
   }
+
+  .login-container .login-content-container {
+    height: 56vmax;
+    background-size: 53%;
+    width: 100%;
+  }
+
+  #login-header {
+    padding-top: 1em;
+  }
+
+  .login-content-container .inner-login-container h4 {
+    padding-top: 2em;
+    font-size: 1.4rem;
+    padding-bottom: 1em;
+  }
+
+  .inner-login-container form {
+    padding: 0em 2em 4em 2em;
+  }
+
+  .inner-login-container .form-group input {
+    padding: 1em 2em 1em 1em;
+  }
+
+  .regis-container .regis-content-container {
+    height: 65vmax;
+    background-size: 50%;
+    width: 100%;
+  }
+
+  .regis-content-container .inner-regis-container h4 {
+    padding-top: 1em;
+    font-size: 1.3rem;
+  }
+  .inner-regis-container .form-group input {
+    padding: 1em 2em 1em 1em;
+  }
+
+  .calc-content-container .result-content-row .result-box {
+    height: 35vh;
+  }
+
+  .inner-calc-content-container .result-content {
+    padding-top: 7em;
+  }
+  .check-gizi-container .cek-gizi-inner-content-container .row-1 {
+    height: 100vh;
+  }
+  .check-gizi-container .cek-gizi-inner-content-container .row-2 {
+    height: 100vh;
+  }
+  .cek-gizi-inner-content-container .row-2 .row-2-content {
+    padding: 2em;
+  }
+  .check-gizi-container
+    .cek-gizi-inner-content-container
+    .row-2
+    .result-nutrition {
+    gap: 1em;
+  }
+
+  .check-gizi-container
+    .cek-gizi-inner-content-container
+    .row-2
+    .result-nutrition
+    p {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 1368px) {
   html {
     font-size: 81%;
+  }
+  .calc-content-container .result-content-row .result-box {
+    height: 32vh;
+  }
+
+  .inner-calc-content-container .result-content {
+    padding-top: 2em;
+  }
+
+  .check-gizi-container .cek-gizi-inner-content-container .row-1 {
+    height: 90vh;
+  }
+  .check-gizi-container .cek-gizi-inner-content-container .row-2 {
+    height: 90vh;
+  }
+
+  .cek-gizi-inner-content-container .row-2 .row-2-content .result-nutrition {
+    gap: 3.5em;
+  }
+  .check-gizi-container
+    .cek-gizi-inner-content-container
+    .row-2
+    .result-nutrition
+    p {
+    font-size: 1.3rem;
+  }
+  .login-container .inner-login-container h4 {
+    padding-top: 1.2em;
+    font-size: 1.3rem;
+  }
+  .regis-container .regis-content-container {
+    height: 70vmax;
   }
 }

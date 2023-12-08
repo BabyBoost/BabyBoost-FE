@@ -113,6 +113,34 @@
   transition: 0.2s ease;
 }
 
+#navbar .dropdown {
+  padding: 1em;
+}
+
+#navbar .dropdown button {
+  padding: 0.5em 2em;
+  background-color: #7c766b;
+  color: #fff;
+  border: 1px solid #7c766b;
+  font-weight: 600;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+#navbar .dropdown .dropdown-menu {
+  background-color: #7c766b;
+  width: 100%;
+}
+
+#navbar .dropdown .dropdown-menu li a {
+  color: #fff;
+  background-color: #7c766b;
+}
+
+#navbar .dropdown .dropdown-menu li a:hover {
+  color: #000;
+}
+
 /* toggle offcanvas */
 @media (max-width: 520px) {
   #navbar {

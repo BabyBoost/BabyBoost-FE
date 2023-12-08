@@ -149,3 +149,77 @@
 .like.liked {
   color: #ff5a44;
 }
+
+/********************************************* Separate Page ************************************************/
+/********************************************* Separate Page ************************************************/
+/********************************************* Separate Page ************************************************/
+.rekomendasi-bahan-container {
+  min-height: 100vh;
+}
+
+.rekomendasi-bahan-header-content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 30vh;
+}
+
+.rekomendasi-bahan-header-content .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 12em 1em 2em 1em;
+  color: #635b4c;
+}
+
+.rekomendasi-bahan-header-content .text-content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.rekomendasi-bahan-header-content .text-content p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  width: 50%;
+}
+
+.rekomendasi-bahan-content-container {
+  padding: 6em 7em 6em 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 4em;
+}
+
+.rekomendasi-bahan-content-container .rekomendasi-bahan-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+}
+
+.rekomendasi-bahan-content .rekomendasi-bahan-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.rekomendasi-bahan-top .food-type {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  align-items: center;
+}
+
+.food-type img {
+  height: 7vh;
+  margin-bottom: 6px;
+}
+
+
