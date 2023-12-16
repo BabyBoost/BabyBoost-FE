@@ -1,4 +1,4 @@
-class ShowLoginMessage {
+class ShowDataMessage {
   constructor() {
     this._render();
   }
@@ -11,12 +11,12 @@ class ShowLoginMessage {
     ShowMessageContentContainer.style.backgroundImage = 'url(./images/bg-hero.png)';
     ShowMessageContentContainer.innerHTML = `
           <div class="showMessage-content-before">
-            <h1>Silahkan Login Terlebih Dahulu</h1>
-            <h4>Klik <a href="#/login">disini</a></h4>
+            <h1>Silahkan Pilih Identitas Anak Terlebih Dahulu!</h1>
+            <h4>Klik <a href="#/dashboard">disini</a></h4>
           </div>
           `;
     return ShowMessageContentContainer;
   }
 }
 
-export default ShowLoginMessage;
+export default ShowDataMessage;

@@ -1,4 +1,4 @@
-#navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,12 +10,12 @@
 }
 
 /* Menambahkan box shadow pada hover */
-#navbar:hover {
+.navbar:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.3s ease;
 }
 
-#nav-header {
+.nav-header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,12 +26,12 @@
   font-size: 2.1rem;
 }
 
-#nav-header span {
+.nav-header span {
   color: #bc9892;
   font-weight: 400;
 }
 
-#nav-header img {
+.nav-header img {
   width: 95px;
   height: 95px;
 }
@@ -72,6 +72,10 @@
 }
 
 .list a:hover {
+  color: #755eac;
+}
+
+.nav-links[aria-current="page"]{
   color: #5e4c88;
 }
 
@@ -113,11 +117,7 @@
   transition: 0.2s ease;
 }
 
-#navbar .dropdown {
-  padding: 1em;
-}
-
-#navbar .dropdown button {
+.navbar .dropdown button {
   padding: 0.5em 2em;
   background-color: #7c766b;
   color: #fff;
@@ -127,23 +127,23 @@
   font-size: 1.1rem;
 }
 
-#navbar .dropdown .dropdown-menu {
+.navbar .dropdown .dropdown-menu {
   background-color: #7c766b;
   width: 100%;
 }
 
-#navbar .dropdown .dropdown-menu li a {
+.navbar .dropdown .dropdown-menu li a {
   color: #fff;
   background-color: #7c766b;
 }
 
-#navbar .dropdown .dropdown-menu li a:hover {
+.navbar .dropdown .dropdown-menu li a:hover {
   color: #000;
 }
 
 /* toggle offcanvas */
 @media (max-width: 520px) {
-  #navbar {
+  .navbar {
     padding: 1em;
   }
 

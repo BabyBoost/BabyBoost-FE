@@ -23,9 +23,9 @@
   </head>
   <body>
     <header>
-      <nav id="navbar">
+      <nav id="navbar" class="navbar">
         <a href="#content" class="skip-to-content">Skip To Content</a>
-        <a href="#/" id="nav-header"
+        <a href="/" id="nav-header" class="nav-header"
           ><img src="./icon.png" alt="header-logo" />Baby<span>Boost</span>
         </a>
         <button name="hamburger-button" id="hamburger-button">
@@ -48,16 +48,16 @@
         </button>
         <div class="navbar-nav">
           <div class="list">
-            <a href="#/">Beranda</a>
-            <a href="#/kalkulator-gizi">Kalkulator Gizi</a>
-            <a href="#/catatan-gizi">Catatan Gizi</a>
-            <a href="#/rekomendasi-bahan">Rekomendasi Bahan</a>
-            <a id="btn-login" href="#/login">Masuk</a>
-            <a id="btn-regis" href="#/daftar">Daftar</a>
+            <a href="/" class="nav-links">Beranda</a>
+            <a href="#/kalkulatorgizi" class="nav-links">Kalkulator Gizi</a>
+            <a href="#/catatangizi" class="nav-links">Catatan Gizi</a>
+            <a href="#/rekomendasibahan" class="nav-links">Rekomendasi Bahan</a>
+            <a id="btn-login" href="#/login" class="login">Masuk</a>
+            <a id="btn-regis" href="#/daftar" class="register">Daftar</a>
           </div>
         </div>
         <div class="extra">
-          <a id="btn-login" href="#/login"">Masuk</a>
+          <a id="btn-login" href="#/login">Masuk</a>
           <a id="btn-regis" href="#/daftar">Daftar</a>
         </div>
       </nav>
@@ -77,10 +77,10 @@
             id="footer-icon"
         /></a>
         <div class="footer-nav">
-          <a href="#">Beranda</a>
-          <a href="#/kalkulator-gizi">Kalkulator Gizi</a>
-          <a href="#/catatan-gizi">Catatan Gizi</a>
-          <a href="#/rekomendasi-bahan">Rekomendasi Bahan</a>
+          <a href="/">Beranda</a>
+          <a href="#/kalkulatorgizi">Kalkulator Gizi</a>
+          <a href="#/catatangizi">Catatan Gizi</a>
+          <a href="#/rekomendasibahan">Rekomendasi Bahan</a>
         </div>
         <a href="#"
           ><img src="./images/media-img-1.png" alt="media-img" id="media-img"
@@ -93,8 +93,8 @@
       crossorigin="anonymous"
     ></script>
     <button class="on-top-btn" id="on-top-btn">&#8593;</button>
-    <div id="loading-circle-container">
-      <div id="loading-circle"></div>
+    <div id="loading-circle-container" class="loading-circle-container">
+      <div id="loading-circle" class="loading-circle"></div>
     </div>
   </body>
 </html>

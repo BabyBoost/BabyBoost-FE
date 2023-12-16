@@ -37,7 +37,6 @@ class LoginPage {
                               <input type="checkbox" id="rememberMe" />
                               <label for="rememberMe">Ingat Saya</label>
                          </div>
-                         <a href="#">Lupa Kata Sandi?</a>
                     </div>
                     <div class="form-group-button">
                          <div class="group-button-login">
@@ -99,7 +98,7 @@ class LoginPage {
     try {
       loadingIndicator.show();
 
-      const response = await fetch('http://localhost:3000/api/auth/login', {
+      const response = await fetch('http://localhost:80/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,15 +110,15 @@ class LoginPage {
 
       if (response.ok) {
         const fullname = data.user.fullname;
-        localStorage.setItem('accessToken', data.accessToken);
-        localStorage.setItem('fullname', fullname);
-        localStorage.setItem('userId', data.user.id);
+        localStorage.setItem('1de9d40a-9738-11ee-b9d1-0242ac120002', data.accessToken);
+        localStorage.setItem('db95dc5a-9739-11ee-b9d1-0242ac120002', fullname);
+        localStorage.setItem('1223afd8-9738-11ee-b9d1-0242ac120002', data.user.id);
 
         if (this._onLoginSuccess) {
           this._onLoginSuccess(fullname);
         }
 
-        window.location.href = '/#/form-input';
+        window.location.href = '/#/option';
       } else {
         const wrongCredentialTxt = document.querySelector('.wrong-credential-txt');
         wrongCredentialTxt.style.visibility = 'visible';

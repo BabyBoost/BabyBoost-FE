@@ -1,10 +1,12 @@
+import LoadingCircle from '../../utils/loading';
+
 class FormInput {
   constructor() {
     this._render();
   }
 
   _render() {
-    document.title = 'BabyBoost - Input Identitas Anak';
+    document.title = 'BabyBoost - Masukan Identitas Anak';
 
     const inputFormContainer = document.createElement('div');
     inputFormContainer.className = 'input-form-container';
@@ -19,8 +21,8 @@ class FormInput {
                     <input type="text" id="namaAnak" name="namaAnak" required>
               </div>
               <div class="input-form-group">
-                    <label for="tanggalLahir">Tanggal Lahir</label>
-                    <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+                    <label for="usia">Usia</label>
+                    <input type="number" id="usia" name="usia" required>
               </div>
               <div class="input-radio">
                     <h4>Jenis Kelamin</h4>
@@ -29,6 +31,7 @@ class FormInput {
                               <label for="jenis_kelamin_perempuan"><input type="radio" id="jenis_kelamin_perempuan" name="jenis_kelamin" value="perempuan"> Perempuan</label>     
                     </div>
               </div>
+              <input type="hidden" id="userId" name="userId" value="${localStorage.getItem('1223afd8-9738-11ee-b9d1-0242ac120002')}">
               <button type="submit" class="input-btn-child" id="input-btn-child">Simpan</button>
          </form>
      </div>
@@ -40,35 +43,40 @@ class FormInput {
   InitializeEvent() {
     const inputForm = document.getElementById('inputForm');
     inputForm.addEventListener('submit', (event) => {
-      event.preventDefault(); // Matikan peristiwa formulir default
+      event.preventDefault();
       this._handleFormSubmit();
     });
   }
 
   async _handleFormSubmit() {
+    const loadingIndicator = new LoadingCircle();
+    const userId = document.getElementById('userId').value;
     const namaAnak = document.getElementById('namaAnak').value;
-    const tanggalLahir = document.getElementById('tanggalLahir').value;
+    const usiaAnak = document.getElementById('usia').value;
     const jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked');
 
     try {
+      loadingIndicator.show();
+
       if (!jenisKelamin) {
         throw new Error('Pilih jenis kelamin.');
       }
 
-      const response = await fetch('http://localhost:3000/api/form/input-anak', {
+      const response = await fetch('http://localhost:80/api/form/post/inputData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          userId,
           namaAnak,
-          tanggalLahir,
+          usiaAnak,
           jenisKelamin: jenisKelamin.value,
         }),
       });
 
       if (response.ok) {
-        window.location.href = '/#/'; // Redirect jika respons berhasil
+        window.location.href = '/#/dashboard';
       } else {
         const errorMessage = await response.text();
         console.error('Failed to save anak data:', errorMessage);
@@ -77,6 +85,8 @@ class FormInput {
     } catch (error) {
       console.error('Error during anak input:', error.message);
       alert(`Terjadi kesalahan: ${error.message}`);
+    } finally {
+      loadingIndicator.hide();
     }
   }
 }

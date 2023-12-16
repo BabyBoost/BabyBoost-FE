@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -33,6 +35,9 @@ module.exports = {
         },
       },
     },
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ],
   },
   module: {
     rules: [
@@ -75,5 +80,6 @@ module.exports = {
         },
       ],
     }),
+    new MiniCssExtractPlugin(),
   ],
 };

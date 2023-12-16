@@ -11,9 +11,16 @@ import NavbarChanger from './utils/navbar-changer';
 import User from './view/pages/profile/user';
 import KalkulatorGizi from './view/pages/feature/kalkulator-gizi';
 import ShowLoginMessage from './view/templates/showLoginMessage';
-import isUserLoggedIn from './utils/atuh';
+import * as utilAuth from './utils/atuh';
 import CatatanGizi from './view/pages/feature/catatan-gizi';
 import FormInput from './view/templates/formInputAnak';
+import Dashboard from './view/templates/dashboard';
+import ShowDataMessage from './view/templates/showDataMessage';
+import UpdateInput from './view/templates/updateFormAnak';
+import RekomendasiBahanPage from './view/pages/feature/rekomendasi-bahan';
+import Karbohidrat from './view/templates/karbohidrat';
+import Protein from './view/templates/protein';
+import Lemak from './view/templates/lemak';
 
 class Main {
   constructor({
@@ -63,44 +70,87 @@ class Main {
       }
       if (url === '/') {
         const landingPage = new LandingPage();
-        landingPage.initializeBtnDynamicContentListener();
-        landingPage.initializeLikeButton();
+        landingPage.InitializeEvent();
       }
       if (url === '/profile') {
         const profilePage = new Profile();
         profilePage.intializeEvent();
       }
-      if (url === '/ubah-password') {
+      if (url === '/passwordchange') {
         const changePasswordPage = new PasswordChangePage();
         changePasswordPage.intializeEvent();
       }
-      if (url === '/form-input') {
+      if (url === '/tambahidentitasanak') {
         const formInput = new FormInput();
         formInput.InitializeEvent();
       }
-      if (url === '/kalkulator-gizi') {
+      if (url === '/updateanak') {
+        const updateAnakPage = new UpdateInput();
+        updateAnakPage.InitializeEvent();
+      }
+      if (url === '/kalkulatorgizi') {
         this._content.innerHTML = '';
-        if (isUserLoggedIn()) {
+        if (utilAuth.isUserLoggedIn()) {
           const kalkulatorGiziPage = new KalkulatorGizi();
           this._content.appendChild(kalkulatorGiziPage._render());
+          kalkulatorGiziPage.InitializeEvent();
+          if (!utilAuth.isDataAvail()) {
+            this._content.innerHTML = '';
+            const dataMessage = new ShowDataMessage();
+            this._content.appendChild(dataMessage._render());
+          }
         } else {
           const loginMessage = new ShowLoginMessage();
           this._content.appendChild(loginMessage._render());
         }
       }
-      if (url === '/catatan-gizi') {
+      if (url === '/rekomendasibahan') {
+        const rekomendasibahanPage = new RekomendasiBahanPage();
+        rekomendasibahanPage.InitializeEvent();
+      }
+
+      if (url === '/karbohidrat') {
+        const karbohidratPage = new Karbohidrat();
+        karbohidratPage.InitializeEvent();
+      }
+      if (url === '/protein') {
+        const proteinPage = new Protein();
+        proteinPage.InitializeEvent();
+      }
+      if (url === '/lemak') {
+        const lemakPage = new Lemak();
+        lemakPage.InitializeEvent();
+      }
+      if (url === '/catatangizi') {
         this._content.innerHTML = '';
-        if (isUserLoggedIn()) {
+        if (utilAuth.isUserLoggedIn()) {
           const catatanGiziPage = new CatatanGizi();
           this._content.appendChild(catatanGiziPage._render());
+          catatanGiziPage.InitializeEvent();
+          if (!utilAuth.isDataAvail()) {
+            this._content.innerHTML = '';
+            const dataMessage = new ShowDataMessage();
+            this._content.appendChild(dataMessage._render());
+          }
         } else {
           const loginMessage = new ShowLoginMessage();
           this._content.appendChild(loginMessage._render());
         }
       }
-      if (url === '/user') {
+      if (url === '/users/:id') {
         const userPage = new User();
-        userPage.fetchUserData();
+        userPage.InitializeEvent();
+      }
+      if (url === '/dashboard') {
+        this._content.innerHTML = ' ';
+        if (utilAuth.isUserLoggedIn()) {
+          const dashboardPage = new Dashboard();
+          this._content.appendChild(dashboardPage._render());
+          dashboardPage.InitializeEvent();
+        } else {
+          const loginMessage = new ShowLoginMessage();
+          this._content.appendChild(loginMessage._render());
+        }
       }
     }
   }

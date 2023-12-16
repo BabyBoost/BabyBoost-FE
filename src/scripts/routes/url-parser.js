@@ -10,6 +10,17 @@ const UrlParser = {
     return this._urlSplitter(url);
   },
 
+  parseActiveUrlWithUserId() {
+    const url = window.location.hash.slice(1).toLowerCase();
+    const splitedUrl = this._urlSplitter(url);
+    const userId = localStorage.getItem('1223afd8-9738-11ee-b9d1-0242ac120002');
+
+    return {
+      ...splitedUrl,
+      userId,
+    };
+  },
+
   _urlSplitter(url) {
     const urlsSplits = url.split('/');
     return {

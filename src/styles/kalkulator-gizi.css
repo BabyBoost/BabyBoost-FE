@@ -1,4 +1,184 @@
-.calc-content-container{
-     min-height: 100vh;
-     background-color: red;
+.calc-content-container {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.calc-content-container .cal-content {
+  display: flex;
+  padding: 10em 5em;
+  flex-direction: column;
+  gap: 1.4em;
+}
+
+.cal-content h1 {
+  color: #411f53;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+.desc-slogan {
+  color: #504c46;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-bottom: 1em;
+}
+
+.cal-content .input-field-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  padding: 0;
+}
+
+.input-field-container .input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.input-field input {
+  width: 50vh;
+  padding: 1.3em 1em 1.3em 1em;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #504c46;
+  background-color: #f5eee5;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #504c46;
+}
+
+.input-field label {
+  color: #504c46;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.cal-content .btnHitungCal {
+  width: 40vh;
+  margin-bottom: 1em;
+  background-color: #522a68;
+  color: #fff;
+  border: 1px solid #522a68;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.7em 1em 0.7em 1em;
+}
+
+.btnHitungCal:hover {
+  opacity: 0.9;
+  transition: 0.2s ease;
+}
+
+.cal-content .result-calc {
+  padding-top: 5em;
+  padding-bottom: 2em;
+  display: none;
+}
+
+.result-calc h3 {
+  color: #a6a6a6;
+  font-weight: 600;
+}
+
+.result-calc .result-row {
+  display: flex;
+  flex-direction: row;
+  padding: 3em 1em;
+  justify-content: space-between;
+}
+
+.result-row .row1-result-gizi {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1.2em;
+}
+
+.row1-result-gizi h1 {
+  width: 55%;
+  text-align: center;
+  padding: 1em;
+  border-radius: 50px;
+}
+
+.row1-result-gizi p {
+  width: 100%;
+  font-size: 1.3rem;
+  color: #635b4c;
+  line-height: 2;
+  font-weight: 500;
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+}
+
+.result-row .row2-result-kal {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row2-result-kal h4 {
+  font-size: 1.7rem;
+  color: #a6a6a6;
+}
+
+.row2-result-kal h1 {
+  color: #635b4c;
+  font-size: 5.5rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+.row2-result-kal h1 span {
+  font-size: 1.2rem;
+  color: #a6a6a6;
+}
+
+.detail-result-type h5 {
+  color: #a6a6a6;
+  font-weight: 600;
+}
+
+.detail-result-type .kal-display {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.detail-result-type .resultKalBaseType {
+  font-size: 2rem;
+  padding: 0;
+  font-weight: 700;
+  color: #504c46;
+}
+
+.anchor-rek-bahan {
+  margin-top: 1.4em;
+  background-color: #eb450b;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 1em 2em 1em 2em;
+  width: 50%;
+  text-align: center;
+}
+
+.saveNutritionData {
+  background-color: #66c95d;
+  color: #fff;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #66c95d;
+  font-weight: 600;
+  font-size: 1.1rem;
 }

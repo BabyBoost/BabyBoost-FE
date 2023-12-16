@@ -100,11 +100,11 @@ class PasswordChangePage {
       // You can add additional client-side validation if needed
 
       // Make a request to the backend to update the password
-      const response = await fetch('http://localhost:3000/api/user/password', {
+      const response = await fetch('http://localhost:80/api/user/put/password', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+          Authorization: `Bearer ${localStorage.getItem('1de9d40a-9738-11ee-b9d1-0242ac120002')}`,
         },
         body: JSON.stringify({ oldPassword, newPassword }),
       });

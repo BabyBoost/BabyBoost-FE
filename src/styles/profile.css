@@ -70,22 +70,6 @@
   margin-right: 1em;
 }
 
-#btn-form-input-ex {
-  background-color: #522a68;
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 0.5em 3em;
-  border-radius: 10px 10px 10px 10px;
-  border: 1px solid #522a68;
-  width: 40%;
-  text-align: center;
-}
-
-#btn-form-input-ex:hover {
-  text-decoration: underline;
-}
-
 .form a {
   font-size: 1.1rem;
   color: #000;

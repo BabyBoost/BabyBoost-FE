@@ -75,9 +75,9 @@ class Profile {
     try {
       loadingIndicator.show();
 
-      const accessToken = localStorage.getItem('accessToken');
+      const accessToken = localStorage.getItem('1de9d40a-9738-11ee-b9d1-0242ac120002');
 
-      const response = await fetch('http://localhost:3000/api/user/profile', {
+      const response = await fetch('http://localhost:80/api/user/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -89,10 +89,9 @@ class Profile {
       const data = await response.json();
 
       if (response.ok) {
-        const navbarChanger = new NavbarChanger(document.querySelector('#navbar .extra'));
+        const navbarChanger = new NavbarChanger(document.querySelectorAll('#navbar .extra'));
         navbarChanger.updateNavbarFromServer();
-
-        window.location.href = '/#/user';
+        window.history.back();
       } else {
         console.error('Error updating profile:', data);
       }

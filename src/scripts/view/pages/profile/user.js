@@ -13,6 +13,9 @@ class User {
     elementContainer.innerHTML = `
      <div class="element-inner-container">
          <div class="form-container">
+          <div class="waiting-indicator-cat" id="waitingIndicatorCat" style="display: none;">
+              <div class="spinner-waiting-cat"></div>
+          </div>
                <h1>Profile</h1>
                     <form action="#" class="form" method="GET">
                          <div class="form-group-profile">
@@ -25,11 +28,10 @@ class User {
                          </div>
                          <div class="form-group-profile-button">
                               <a id="btn-profile-change" href="#/profile">Ubah Profile</a>
-                              <a id="btn-form-input-ex" href="#/form-input">+ Tambah Identitas Anak &#8599;</a>
                          </div>
                          
                          <hr>
-                         <a href="#/ubah-password">Ubah Password</a>
+                         <a href="#/passwordchange">Ubah Password</a>
                     </form>
          </div>
      </div>
@@ -38,16 +40,28 @@ class User {
     return elementContainer;
   }
 
+  async InitializeEvent() {
+    const Indicator = document.getElementById('waitingIndicatorCat');
+
+    try {
+      Indicator.style.display = 'flex';
+
+      await this.fetchUserData();
+    } finally {
+      Indicator.style.display = 'none';
+    }
+  }
+
   async fetchUserData() {
     try {
-      const accessToken = localStorage.getItem('accessToken');
+      const accessToken = localStorage.getItem('1de9d40a-9738-11ee-b9d1-0242ac120002');
 
       if (!accessToken) {
-        console.error('Access token not found');
+        console.error('User is not found');
         return;
       }
 
-      const response = await fetch('http://localhost:3000/api/user/profile', {
+      const response = await fetch('http://localhost:80/api/user/profile', {
         headers: {
           Authorization: accessToken,
         },

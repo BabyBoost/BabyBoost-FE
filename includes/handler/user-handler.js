@@ -1,5 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint-disable prefer-destructuring */
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const { createClient } = require('@supabase/supabase-js');
@@ -12,7 +10,7 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-userRouter.get('/profile', async (req, res) => {
+userRouter.get('/get/profile', async (req, res) => {
   try {
     const accessToken = req.headers.authorization;
 
@@ -40,7 +38,7 @@ userRouter.get('/profile', async (req, res) => {
   }
 });
 
-userRouter.put('/profile', async (req, res) => {
+userRouter.put('/update/profile', async (req, res) => {
   try {
     const accessToken = req.headers.authorization;
 
@@ -75,7 +73,7 @@ userRouter.put('/profile', async (req, res) => {
   }
 });
 
-userRouter.put('/password', async (req, res) => {
+userRouter.put('/put/password', async (req, res) => {
   try {
     const accessToken = req.headers.authorization;
 
@@ -91,7 +89,7 @@ userRouter.put('/password', async (req, res) => {
     // Verify the old password
     const { data: userData } = await supabase
       .from('users')
-      .select('password') // Assuming your password field is named 'password'
+      .select('password')
       .eq('id', userId)
       .single();
 
