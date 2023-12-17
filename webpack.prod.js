@@ -1,5 +1,4 @@
 const { merge } = require('webpack-merge');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const common = require('./webpack.common');
@@ -10,8 +9,8 @@ module.exports = merge(common, {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minSize: 20000,
-      maxSize: 24400,
+      minSize: 10000,
+      maxSize: 70000,
       minChunks: 1,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
@@ -50,18 +49,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
-      runtimeCaching: [
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://api-babyboost.cyclic.app/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'babyboost-api',
-          },
-        },
-      ],
-    }),
     new MiniCssExtractPlugin(),
   ],
 });
