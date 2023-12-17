@@ -1,0 +1,121 @@
+.element-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.element-inner-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 11em 4em;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+}
+
+.form-container h1 {
+  font-weight: 700;
+  color: #411f53;
+  padding-bottom: 0.5em;
+}
+
+.form {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-group-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-group-profile label {
+  color: #504c46;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.form-group-profile input {
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #000;
+  padding: 1em 1.5em;
+  width: 700px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #504c46;
+  background-color: #f5eee5;
+  outline: none;
+}
+
+.form-group-profile-button {
+  padding-top: 0.5em;
+}
+
+.form-group-profile-button #btn-profile-change {
+  background-color: #522a68;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5em 3em;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #522a68;
+  margin-right: 1em;
+}
+
+.form a {
+  font-size: 1.1rem;
+  color: #000;
+  padding-top: 1em;
+}
+
+.form-group-profile-button-after-change {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5em;
+  gap: 1em;
+}
+
+#btn-back {
+  background-color: #fff;
+  border: 1px solid #522a68;
+  border-radius: 10px 10px 10px 10px;
+  font-weight: 500;
+  padding: 0.5em 3em;
+  color: #522a68;
+  cursor: pointer;
+}
+
+#btn-back:hover {
+  background-color: #522a68;
+  color: #fff;
+}
+
+#btn-update-profile {
+  background-color: #33682a;
+  border: 1px solid #33682a;
+  font-weight: 500;
+  padding: 0.5em 3em;
+  color: #fff;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#btn-update-password {
+  background-color: #33682a;
+  border: 1px solid #33682a;
+  font-weight: 500;
+  padding: 0.5em 3em;
+  color: #fff;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.password-same-indicator {
+  padding-bottom: 1.5em;
+}

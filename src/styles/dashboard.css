@@ -1,0 +1,145 @@
+/* Dashboard Calc */
+.dash-container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.dash-content {
+  padding: 10em 4em 5em 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-content h1 {
+  color: #aba798;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.dash-container-cards {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+}
+
+.dash-container-cards .dash-cards {
+  background-color: #fff;
+  width: 180vh;
+  padding: 2em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dash-cards h5 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.dash-container-cards .dash-cards:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s ease;
+  color: #504c46;
+}
+
+.dash-cards .btn-cards-group{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.btn-cards-group a{
+  background-color: #411f53;
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-cards-group .update-child-btn{
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 1em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #7C766B;
+}
+
+.btn-cards-group .delete-child-btn{
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 1em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #FF0000;
+}
+
+.btn-cards-group a:hover{
+  opacity: 0.8;
+}
+
+
+.btn-cards-group #deleteBtnData{
+  background-color: #FF0000;
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 1em;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.add-data-btn{
+  margin-top: 1em;
+  background-color: #411f53;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #411f53;
+  text-decoration: none;
+  padding: 0.7em 1.5em 0.7em 1.5em;
+}
+
+.add-data-btn:hover{
+  opacity: 0.9;
+}
+
+.waiting-indicator {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 2.8em;
+  gap: 0.2em;
+}
+
+.waiting-indicator h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #411f53;
+}
+
+.spinner-waiting {
+  border: 4px solid #411f53;
+  border-radius: 50%;
+  border-top: 8px solid transparent;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

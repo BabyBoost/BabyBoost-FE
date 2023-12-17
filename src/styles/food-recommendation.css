@@ -65,8 +65,8 @@
 }
 
 .card {
-  width: 50vh;
-  height: 22vh;
+  width: 52vh;
+  height: 25vh;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 40px 40px 40px 40px;
   background-color: #fff;
@@ -80,6 +80,7 @@
   justify-content: center;
   padding: 2em;
   gap: 1.4em;
+  width: 100%;
 }
 
 .card-body img {
@@ -102,6 +103,8 @@
   color: #522a68;
   padding: 0.2em 0.8em;
   border-radius: 10px 10px 10px 10px;
+  text-align: center;
+  width: 100%;
 }
 
 .dose-detail {
@@ -110,6 +113,11 @@
 }
 
 .weight-detail {
+  display: flex;
+  gap: 0.4em;
+}
+
+.cals-detail{
   display: flex;
   gap: 0.4em;
 }
@@ -148,4 +156,125 @@
 
 .like.liked {
   color: #ff5a44;
+}
+
+/********************************************* Separate Page ************************************************/
+/********************************************* Separate Page ************************************************/
+/********************************************* Separate Page ************************************************/
+.rekomendasi-bahan-container {
+  min-height: 100vh;
+}
+
+.rekomendasi-bahan-header-content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 30vh;
+}
+
+.rekomendasi-bahan-header-content .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 12em 1em 2em 1em;
+  color: #635b4c;
+}
+
+.rekomendasi-bahan-header-content .text-content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.rekomendasi-bahan-header-content .text-content p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  width: 50%;
+}
+
+.rekomendasi-bahan-content-container {
+  padding: 6em 0em 10em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+}
+
+.rekomendasi-bahan-content-container .rekomendasi-bahan-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+}
+
+.rekomendasi-bahan-content .rekomendasi-bahan-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: #635B4C;
+}
+
+.rekomendasi-bahan-content .rekomendasi-bahan-top-protein {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 5em;
+  color: #635B4C;
+
+}
+
+.rekomendasi-bahan-content .rekomendasi-bahan-top-lemak {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 5em;
+  color: #635B4C;
+
+}
+
+.rekomendasi-bahan-top .food-type {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  align-items: center;
+}
+
+.rekomendasi-bahan-top-protein .food-type {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  align-items: center;
+}
+
+.rekomendasi-bahan-top-lemak .food-type {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  align-items: center;
+}
+
+.food-type img {
+  height: 7vh;
+  margin-bottom: 6px;
+}
+
+/******************************** Karbohidrat **********************/
+.container-foodMore-content{
+  min-height: 100vh;
+  padding: 10em 0em 8em 0em;
+}
+
+.container-foodMore-content h1{
+  padding-bottom: 1.5em;
+  color: #522a68;
+  font-weight: 700;
 }

@@ -1,5 +1,5 @@
 import {
-  rowContent1, rowContent2, rowContent3, rowContent4,
+  rowContent1, rowContent2, rowContent3,
 } from '../view/templates/templateCreator';
 
 const changeDynamicContent = (dynamicContent, templateIndex) => {
@@ -18,10 +18,6 @@ const changeDynamicContent = (dynamicContent, templateIndex) => {
       case 3:
         dynamicContent.innerHTML = rowContent3();
         dynamicContent.classList.add('row-content3');
-        break;
-      case 4:
-        dynamicContent.innerHTML = rowContent4();
-        dynamicContent.classList.add('row-content4');
         break;
       default:
         break;

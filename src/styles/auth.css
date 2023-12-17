@@ -1,0 +1,383 @@
+.login-container {
+  background-color: rgb(233, 226, 214);
+  position: relative;
+}
+
+.login-content-container {
+  display: flex;
+  height: 116vh;
+  background-repeat: no-repeat;
+  justify-content: end;
+  padding-top: 7.8em;
+}
+
+.inner-login-container {
+  height: 100%;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 50px 0px 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8em 8em;
+}
+
+#login-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #5e4c88;
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+#login-header span {
+  color: #bc9892;
+  font-weight: 400;
+}
+
+#login-header img {
+  width: 95px;
+  height: 95px;
+}
+
+.inner-login-container h4 {
+  padding-top: 4em;
+  color: #7c766b;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+form {
+  padding: 1em 2em 4em 2em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  font-weight: 700;
+  color: #411f53;
+  padding: 0.7em;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  padding: 1.3em 2.6em 1.3em 1em;
+  width: 55vh;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #411f53;
+  color: #411f53;
+  outline: none;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-password-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  margin-left: 1em;
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: center;
+  padding: 0.7em 3.5em;
+  color: #eb450b;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.checkbox label {
+  font-weight: 500;
+}
+
+.form-group-row a {
+  color: #eb450b;
+}
+
+.form-group-button {
+  padding-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.group-button-login {
+  padding: 1em;
+}
+
+.group-button-login button {
+  background-color: #522a68;
+  padding: 0.7em 4.2em;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #522a68;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.group-button-login button:hover {
+  background-color: #fff;
+  transition: 0.2s ease;
+  color: #522a68;
+  font-weight: 600;
+}
+
+.group-button-register {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eb450b;
+  font-weight: 600;
+}
+
+.group-button-register a {
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #522a68;
+  color: #522a68;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.7em 4.2em;
+}
+
+.group-button-register a:hover {
+  color: #fff;
+  background-color: #522a68;
+  transition: 0.2s ease;
+}
+
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+/******************************************************* register form *************************************************/
+.regis-container {
+  position: relative;
+  background-color: rgb(233, 226, 214);
+}
+
+.regis-content-container {
+  display: flex;
+  height: 135vh;
+  background-repeat: no-repeat;
+  justify-content: end;
+  padding-top: 7.8em;
+}
+
+.inner-regis-container {
+  height: 100%;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 50px 0px 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8em 8em;
+}
+
+.inner-regis-container h4 {
+  padding-top: 2em;
+  color: #7c766b;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#register-button {
+  background-color: #522a68;
+  padding: 0.7em 4.2em;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #522a68;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#register-button:hover {
+  background-color: #fff;
+  color: #522a68;
+}
+
+.wrong-credential-txt {
+  visibility: hidden;
+  color: #ff0000;
+}
+
+.same-email-indicators {
+  display: none;
+  color: #ff0000;
+}
+
+.char-indicator {
+  display: none;
+  color: #ff0000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.char-indicator span {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.indicator-password {
+  height: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.indicator-password span {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: lightgrey;
+  border-radius: 5px;
+}
+
+.indicator-password span:nth-child(2) {
+  margin: 0 3px;
+}
+
+.indicator-password span.active:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.indicator-password span.weak:before {
+  background-color: #ff4757;
+}
+.indicator-password span.medium:before {
+  background-color: orange;
+}
+
+.indicator-password span.strong:before {
+  background-color: #23ad5c;
+}
+
+.txt-indicator-password {
+  font-size: 1rem;
+  font-weight: 500;
+  display: none;
+  margin-bottom: -10px;
+  padding-bottom: 1em;
+}
+
+.txt-indicator-password.weak {
+  color: #ff4757;
+}
+
+.txt-indicator-password.medium {
+  color: orange;
+}
+
+.txt-indicator-password.strong {
+  color: #23ad5c;
+}
+
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+/* ADDITIONAL */
+input[type="checkbox"] {
+  /* Menghilangkan default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 13px;
+  /* Gaya border dan background ketika tidak dicentang */
+  border: 2px solid #eb450b;
+  background-color: #fff;
+  /* Posisi relative untuk styling pseudo-elements */
+  position: relative;
+  /* Penggunaan pseudo-element untuk styling checkmark */
+}
+/* Gaya tampilan checkbox ketika dicentang */
+input[type="checkbox"]:checked {
+  background-color: #eb450b; /* Ganti dengan warna yang diinginkan */
+}
+/* Gaya tampilan checkmark */
+input[type="checkbox"]::before {
+  content: "\2713"; /* Karakter unicode untuk checkmark */
+  font-size: 10px;
+  color: #fff; /* Ganti dengan warna yang diinginkan */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/* Gaya tampilan checkmark ketika dicentang */
+input[type="checkbox"]:checked::before {
+  display: block;
+}
+
+/*Forgot Password*/
+.forgot-password-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.forgot-password-container .forgot-password-text {
+  padding-bottom: 1.5em;
+}
+
+.forgot-password-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #522a68;
+}
+
+.forgot-password-text p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #7c766b;
+}
+
+.forgot-password-content {
+  padding: 11em 4.2em 1em 4.2em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

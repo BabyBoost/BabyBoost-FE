@@ -1,11 +1,11 @@
 const DrawerInitiator = {
-  init({ hambuergerBtn, navbarList }) {
-    hambuergerBtn.addEventListener('click', (event) => {
+  init({ hamburgerBtn, navbarList }) {
+    hamburgerBtn.addEventListener('click', (event) => {
       this._toggleDrawer(event, navbarList);
     });
 
     document.addEventListener('click', (e) => {
-      if (!hambuergerBtn.contains(e.target) && !navbarList.contains(e.target)) {
+      if (!hamburgerBtn.contains(e.target) && !navbarList.contains(e.target)) {
         this._closeDrawer(e, navbarList);
       }
     });
