@@ -62,7 +62,7 @@ class FormInput {
         throw new Error('Pilih jenis kelamin.');
       }
 
-      const response = await fetch('http://localhost:80/api/form/post/inputData', {
+      const response = await fetch('https://api-babyboost.cyclic.app/api/form/post/inputData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

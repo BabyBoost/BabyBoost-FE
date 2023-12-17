@@ -57,7 +57,7 @@ class UpdateInput {
 
       try {
         loadingIndicator.show();
-        const response = await fetch(`http://localhost:80/api/dashboard/put/${idAnak}`, {
+        const response = await fetch(`https://api-babyboost.cyclic.app/api/dashboard/put/${idAnak}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

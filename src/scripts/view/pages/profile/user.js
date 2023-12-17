@@ -61,7 +61,7 @@ class User {
         return;
       }
 
-      const response = await fetch('http://localhost:80/api/user/profile', {
+      const response = await fetch('https://api-babyboost.cyclic.app/api/user/profile', {
         headers: {
           Authorization: accessToken,
         },

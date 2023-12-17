@@ -77,7 +77,7 @@ class Profile {
 
       const accessToken = localStorage.getItem('1de9d40a-9738-11ee-b9d1-0242ac120002');
 
-      const response = await fetch('http://localhost:80/api/user/profile', {
+      const response = await fetch('https://api-babyboost.cyclic.app/api/user/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

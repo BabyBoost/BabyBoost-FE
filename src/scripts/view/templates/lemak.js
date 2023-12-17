@@ -223,7 +223,7 @@ class Lemak {
 
   async fetchData(elementIdPrefix, bgColor, textColor, desc) {
     try {
-      const response = await fetch('http://localhost:80/api/rekomendasiBahan/get/lemak');
+      const response = await fetch('https://api-babyboost.cyclic.app/api/rekomendasiBahan/get/lemak');
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`);
       }

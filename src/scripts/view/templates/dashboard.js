@@ -44,7 +44,7 @@ class Dashboard {
 
   async _fetchChildrenNames(userId) {
     try {
-      const response = await fetch(`http://localhost:80/api/dashboard/get/${userId}`);
+      const response = await fetch(`https://api-babyboost.cyclic.app/api/dashboard/get/${userId}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -62,7 +62,7 @@ class Dashboard {
     const loadingIndicator = new LoadingCircle();
     loadingIndicator.show();
     try {
-      const response = await fetch(`http://localhost:80/api/dashboard/delete/${idAnak}`, {
+      const response = await fetch(`https://api-babyboost.cyclic.app/api/dashboard/delete/${idAnak}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

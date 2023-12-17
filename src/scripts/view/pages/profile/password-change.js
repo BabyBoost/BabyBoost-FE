@@ -100,7 +100,7 @@ class PasswordChangePage {
       // You can add additional client-side validation if needed
 
       // Make a request to the backend to update the password
-      const response = await fetch('http://localhost:80/api/user/put/password', {
+      const response = await fetch('https://api-babyboost.cyclic.app/api/user/put/password', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

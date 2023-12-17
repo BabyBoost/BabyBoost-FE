@@ -313,7 +313,7 @@ class Karbohidrat {
 
   async fetchData(elementIdPrefix, bgColor, textColor, desc) {
     try {
-      const response = await fetch('http://localhost:80/api/rekomendasiBahan/get/karbohidrat');
+      const response = await fetch('https://api-babyboost.cyclic.app/api/rekomendasiBahan/get/karbohidrat');
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`);
       }

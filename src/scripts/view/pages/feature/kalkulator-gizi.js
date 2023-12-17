@@ -199,7 +199,7 @@ class KalkulatorGizi {
     try {
       loadingIndicator.show();
 
-      const apiUrl = 'http://localhost:80/api/catatan/post';
+      const apiUrl = 'https://api-babyboost.cyclic.app/api/catatan/post';
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {

@@ -84,7 +84,7 @@ class NavbarChanger {
       return;
     }
 
-    fetch('http://localhost:80/api/user/profile', {
+    fetch('https://api-babyboost.cyclic.app/api/user/profile', {
       headers: {
         Authorization: accessToken,
       },

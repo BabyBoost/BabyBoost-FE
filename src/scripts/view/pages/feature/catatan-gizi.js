@@ -71,7 +71,7 @@ class CatatanGizi {
   async fetchChildData() {
     try {
       const childId = localStorage.getItem('c3f36ae8-9844-11ee-b9d1-0242ac120002');
-      const apiUrl = `http://localhost:80/api/catatan/get/${childId}`;
+      const apiUrl = `https://api-babyboost.cyclic.app/api/catatan/get/${childId}`;
 
       const response = await fetch(apiUrl);
 
@@ -152,7 +152,7 @@ class CatatanGizi {
     const loadingIndicator = new LoadingCircle();
     try {
       loadingIndicator.show();
-      const apiUrl = `http://localhost:80/api/catatan/delete/${catatanId}`;
+      const apiUrl = `https://api-babyboost.cyclic.app/api/catatan/delete/${catatanId}`;
       const response = await fetch(apiUrl, {
         method: 'DELETE',
       });
