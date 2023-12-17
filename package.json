@@ -6,7 +6,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "serve": "http-server dist --port 9000",
+    "serve": "http-server dist --port 5000",
     "bundle-analyze": "webpack --config webpack.common.js"
   },
   "author": "",
@@ -43,10 +43,6 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
-    "whatwg-fetch": "^3.6.2",
-    "workbox-webpack-plugin": "^7.0.0"
-  },
-  "dependencies": {
-    "workbox-window": "^7.0.0"
+    "whatwg-fetch": "^3.6.2"
   }
 }

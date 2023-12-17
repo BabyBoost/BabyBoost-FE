@@ -75,7 +75,7 @@ class Dashboard {
         localStorage.removeItem('c3f36ae8-9844-11ee-b9d1-0242ac120002');
         localStorage.removeItem('bfdb816a-fed1-4b2f-a68f-5fecc9c7e04c');
 
-        location.reload();
+        window.location.reload();
       } else {
         alert('Gagal Menghapus Data');
       }

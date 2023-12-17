@@ -2,7 +2,6 @@ import 'lazysizes';
 import '../styles/main.css';
 import Main from './app';
 import LoadingCircle from './utils/loading';
-import swRegister from './utils/sw-register';
 
 const app = new Main({
   hamburgerBtn: document.getElementById('hamburger-button'),
@@ -43,5 +42,4 @@ window.addEventListener('load', async () => {
   loadingBar.show();
   app.renderPage();
   loadingBar.hide();
-  swRegister();
 });
