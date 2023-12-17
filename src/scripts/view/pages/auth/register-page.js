@@ -1,7 +1,3 @@
-/* eslint-disable arrow-parens */
-/* eslint-disable no-alert */
-/* eslint-disable object-shorthand */
-
 import LoadingCircle from '../../../utils/loading';
 
 class RegisterPage {

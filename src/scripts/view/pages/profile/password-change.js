@@ -32,6 +32,12 @@ class PasswordChangePage {
                                    <input type="password" id="newPassword" name="password" required />
                                    <span class="show-password-icon" id="showPasswordIconConfirmation">&#x1F441;</span>     
                               </div>
+                              <div class="indicator-password">
+                                  <span class="weak"></span>
+                                  <span class="medium"></span>
+                                  <span class="strong"></span>
+                              </div>
+                              <div class="txt-indicator-password"></div>
                          </div>
                          <div class="form-group-profile-button-after-change">
                               <button id="btn-back">Kembali</button>
@@ -70,6 +76,7 @@ class PasswordChangePage {
 
     passwordInputConfirmation.addEventListener('input', () => {
       this._toggleShowPasswordIconVisibility(passwordInputConfirmation, showPasswordIconConfirmation);
+      this._handleIndicatorNewPasswordInput(passwordInputConfirmation);
     });
 
     showPasswordIconConfirmation.addEventListener('click', () => {
@@ -78,7 +85,6 @@ class PasswordChangePage {
 
     const btnBack = document.getElementById('btn-back');
     btnBack.addEventListener('click', () => {
-      // eslint-disable-next-line no-alert
       const userConfirmation = confirm('Anda akan kembali ke halaman sebelumnya. Apakah Anda yakin ingin melanjutkan?');
 
       if (userConfirmation) {
@@ -97,9 +103,6 @@ class PasswordChangePage {
       const newPassword = document.getElementById('newPassword').value;
       const passSameIndicator = document.querySelector('.password-same-indicator');
 
-      // You can add additional client-side validation if needed
-
-      // Make a request to the backend to update the password
       const response = await fetch('https://api-babyboost.cyclic.app/api/user/put/password', {
         method: 'PUT',
         headers: {
@@ -115,17 +118,68 @@ class PasswordChangePage {
         passSameIndicator.style.fontWeight = '600';
         oldPasswordStyle.style.border = '1px solid #FF0000';
       } else {
-        // Handle success, you may want to show a success message
         const navbarChanger = new NavbarChanger(document.querySelector('#navbar .extra'));
         navbarChanger.logout();
         window.location.href = '/#/login';
         location.reload();
       }
     } catch (error) {
-      // Handle errors, you may want to show an error message
       console.error('Error updating password:', error);
     } finally {
       loadingIndicator.hide();
+    }
+  }
+
+  _handleIndicatorNewPasswordInput(input) {
+    const indicator = document.querySelector('.indicator-password');
+    const weak = document.querySelector('.indicator-password .weak');
+    const medium = document.querySelector('.indicator-password .medium');
+    const strong = document.querySelector('.indicator-password .strong');
+    const text = document.querySelector('.txt-indicator-password');
+
+    const regExpWeak = /(?=.{1,3})/;
+    const regExpMedium = /(?=.{6,})/;
+    const regExpStrong = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])/;
+
+    let strength = 0;
+
+    if (input.value.match(regExpWeak)) {
+      strength = 1;
+    }
+
+    if (input.value.match(regExpMedium)) {
+      strength = 2;
+    }
+
+    if (input.value.match(regExpStrong)) {
+      strength = 3;
+    }
+
+    indicator.style.display = 'flex';
+    [weak, medium, strong].forEach((el, index) => {
+      el.classList.toggle('active', index < strength);
+    });
+
+    text.style.display = 'block';
+
+    switch (strength) {
+      case 1:
+        text.textContent = 'Your password is too weak';
+        text.classList.add('weak');
+        text.classList.remove('medium', 'strong');
+        break;
+      case 2:
+        text.textContent = 'Your password is medium';
+        text.classList.add('medium');
+        text.classList.remove('weak', 'strong');
+        break;
+      case 3:
+        text.textContent = 'Your password is strong';
+        text.classList.add('strong');
+        text.classList.remove('weak', 'medium');
+        break;
+      default:
+        text.style.display = 'none';
     }
   }
 

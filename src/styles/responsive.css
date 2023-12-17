@@ -6,7 +6,7 @@
   #main-content {
     padding-top: 5em;
   }
-  #navbar{
+  #navbar {
     padding: 0.7em 3em;
   }
 
@@ -131,6 +131,12 @@
     font-size: 1.3rem;
   }
   .regis-container .regis-content-container {
-    height: 70vmax;
+    height: 75vmax;
+  }
+  .regis-container .regis-content-container {
+    height: 75vmax;
+  }
+  .regis-container .inner-regis-container h4 {
+    font-size: 1.2rem;
   }
 }

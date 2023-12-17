@@ -126,7 +126,7 @@ class KalkulatorGizi {
     container.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  _hitungKebutuhanEnergi(tinggiBadan, beratBadan, jenisKelamin, usiaAnak) {
+  _hitungKebutuhanEnergi(tinggiBadan, beratBadan, jenisKelamin, usiaAnak, displayResult = true) {
     let kebutuhanEnergi;
 
     if (jenisKelamin === 'laki-laki') {
@@ -147,18 +147,20 @@ class KalkulatorGizi {
       }
     }
 
-    // Display the calculated total calories
-    const kebutuhanEnergiElement = document.getElementById('kebutuhanEnergi');
-    kebutuhanEnergiElement.textContent = kebutuhanEnergi.toFixed(2);
+    if (displayResult) {
+      const kebutuhanEnergiElement = document.getElementById('kebutuhanEnergi');
+      kebutuhanEnergiElement.textContent = kebutuhanEnergi.toFixed(2);
 
-    // Calculate and display the breakdown of carbohydrates, fats, and proteins
-    const jumlahKarbo = (50 / 100) * kebutuhanEnergi;
-    const jumlahLemak = (20 / 100) * kebutuhanEnergi;
-    const jumlahProtein = (10 / 100) * kebutuhanEnergi;
+      const jumlahKarbo = (50 / 100) * kebutuhanEnergi;
+      const jumlahLemak = (20 / 100) * kebutuhanEnergi;
+      const jumlahProtein = (10 / 100) * kebutuhanEnergi;
 
-    document.getElementById('jumlahKarbo').textContent = jumlahKarbo.toFixed(2);
-    document.getElementById('jumlahLemak').textContent = jumlahLemak.toFixed(2);
-    document.getElementById('jumlahProtein').textContent = jumlahProtein.toFixed(2);
+      document.getElementById('jumlahKarbo').textContent = jumlahKarbo.toFixed(2);
+      document.getElementById('jumlahLemak').textContent = jumlahLemak.toFixed(2);
+      document.getElementById('jumlahProtein').textContent = jumlahProtein.toFixed(2);
+    }
+
+    return kebutuhanEnergi;
   }
 
   _hitungStatusGizi(tinggiBadan, beratBadan, jenisKelamin, usiaAnakTahun) {

@@ -1,14 +1,12 @@
 {
   "name": "babyboost",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website Pemantauan Gizi Anak (Desktop Only)",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "test": "jest",
     "serve": "http-server dist --port 9000",
-    "e2e": "codeceptjs run --steps",
     "bundle-analyze": "webpack --config webpack.common.js"
   },
   "author": "",
@@ -16,10 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
-    "@jest/globals": "^29.6.1",
     "@supabase/supabase-js": "^2.39.0",
-    "@types/jest": "^29.5.3",
-    "babel-jest": "^29.7.0",
     "babel-loader": "^8.2.5",
     "bcrypt": "^5.1.1",
     "copy-webpack-plugin": "^11.0.0",
@@ -31,13 +26,9 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0",
     "express": "^4.18.2",
-    "fake-indexeddb": "^4.0.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.1.1",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jest-mock": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "karma": "^6.4.2",
     "karma-chrome-launcher": "^3.1.1",
@@ -47,10 +38,8 @@
     "karma-webpack": "^5.0.0",
     "lazysizes": "^5.3.2",
     "mini-css-extract-plugin": "^2.7.6",
-    "sharp": "^0.33.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
-    "webpack-bundle-analyzer": "^4.9.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
@@ -58,8 +47,6 @@
     "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
-    "idb": "^7.1.1",
-    "regenerator-runtime": "^0.13.9",
     "workbox-window": "^7.0.0"
   }
 }

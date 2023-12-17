@@ -17,6 +17,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Run Automated Test
+      - name: Run Project 
         run: |
           npm install
