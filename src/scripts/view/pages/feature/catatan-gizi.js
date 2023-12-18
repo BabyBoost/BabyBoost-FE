@@ -41,8 +41,8 @@ class CatatanGizi {
             <table class="user-gizi-table">
               <tr class="keterangan">
                 <td>Tanggal</td>
-                <td>Berat Badan</td>
-                <td>Tinggi Badan</td>
+                <td>Berat Badan (kg)</td>
+                <td>Tinggi Badan (cm)</td>
                 <td>Status Gizi</td>
                 <td>Aksi</td>
               </tr>

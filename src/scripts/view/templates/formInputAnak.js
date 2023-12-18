@@ -21,7 +21,7 @@ class FormInput {
                     <input type="text" id="namaAnak" name="namaAnak" required>
               </div>
               <div class="input-form-group">
-                    <label for="usia">Usia</label>
+                    <label for="usia">Usia (Tahun)</label>
                     <input type="number" id="usia" name="usia" required>
               </div>
               <div class="input-radio">
