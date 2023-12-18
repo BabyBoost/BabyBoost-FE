@@ -27,11 +27,11 @@ class KalkulatorGizi {
        <h5 class="desc-slogan">Hitung Kebutuhan Kalori <span id="nameSlogan"></span>, Ciptakan Masa Depan Sehat bersama Orang Tua Bijak</h5>
        <form class="input-field-container">
           <div class="input-field">
-             <label for="tinggiBadan">Tinggi Badan</label>
+             <label for="tinggiBadan">Tinggi Badan (cm)</label>
              <input type="number" id="tinggiBadan" name="tinggiBadan" required>
           </div>
           <div class="input-field">
-              <label for="beratBadan">Berat Badan</label>
+              <label for="beratBadan">Berat Badan (kg)</label>
               <input type="number" id="beratBadan" name="beratBadan" required>
           </div>
           <input type="hidden" id="tanggalCatat" name="tanggalCatat" value="">

@@ -150,7 +150,7 @@ class RegisterPage {
         return;
       }
 
-      if (fullname.length <= 8) {
+      if (fullname.length < 8) {
         charIndicator.textContent = 'Masukan Setidaknya 8 Karakter';
         charIndicator.style.display = 'block';
         nameInput.style.border = '1px solid #FF0000';
