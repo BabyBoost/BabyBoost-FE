@@ -4,7 +4,7 @@ const rowContent1 = () => `
           <h2>Menghitung kebutuhan kalori sesuai kondisi anak</h2>
           <p>
             BabyBoost membantu kamu untuk memenuhi kebutuhan kalori anak dan
-            memberikan rekomendasi bahan makanan yang disertai informasi gizi
+            memberikan rekomendasi bahan makanan dengan disertai informasi gizi dan memeriksa status gizi untuk memastikan bahwa si kecil berada dalam kondisi ideal. 
           </p>
           <div class="btn-cta-anchor">
             <a href="#/kalkulatorgizi" id="cta-content-1">
@@ -33,7 +33,7 @@ const rowContent3 = () => `
      <div class="content-text">
        <h2>Memberikan rekomendasi bahan makanan untuk si kecil</h2>
        <p>
-          Bersama BabyBoost, kamu dapat mencatat setiap pertumbuhan berat badan, tinggi badan, dan juga status gizi anak
+          BabyBoost akan memberikan kamu rekomendasi bahan makanan untuk si kecil yang disertai informasi gizi agar kebutuhan anak terpenuhi
        </p>
        <div class="btn-cta-anchor">
             <a href="#/rekomendasibahan" id="cta-content-1">
