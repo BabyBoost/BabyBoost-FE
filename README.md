@@ -31,7 +31,7 @@ Anggota Kelompok :
 - F251YB302 – Rizky Ahmad Zidan Nasution
 <br>
 
-# Clone
+# Configuration
 ```cmd
 git clone https://github.com/warizmy/BabyBoost.git
 ```
