@@ -14,7 +14,7 @@ Kami sadar bahwa status gizi anak berhubungan erat dengan asupan makanan. Oleh k
 
 # Website (Desktop Only)
 
-Silahkan Kunjungi website kami : [BabyBoost](https://babyboost.netlify.app "BabyBoost").
+Silahkan kunjungi Website kami : [BabyBoost](https://babyboost.netlify.app "BabyBoost").
 <br>
 <br>
 
@@ -26,9 +26,9 @@ Anggota Kelompok :
 
 - F350YA231 – Muhammad Abid Al Khawarizmi
 - F350YA315 – Nofal Izwar Mansyuri
+- S001XB473 – Nadira Belinda
 - F251XB353 – Hilmia Rahma
 - F251YB302 – Rizky Ahmad Zidan Nasution
-- S001XB473 – Nadira Belinda
 <br>
 
 # Clone
