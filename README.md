@@ -12,7 +12,7 @@ Kami sadar bahwa status gizi anak berhubungan erat dengan asupan makanan. Oleh k
 </p>
 <br>
 
-# Website
+# Website (Desktop Only)
 
 Silahkan Kunjungi website kami : [BabyBoost](https://babyboost.netlify.app "BabyBoost").
 <br>
