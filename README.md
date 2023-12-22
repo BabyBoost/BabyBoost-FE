@@ -5,7 +5,7 @@
 </div>
 <br>
 
-# About BabyBoost
+# About
 <p>Isu mengenai gizi anak menjadi hal penting sejak dulu hingga masa sekarang karena anak merupakan generasi penerus dan tumpuan masa depan bagi bangsa dan negara. Untuk mampu berfungsi sebagai generasi penerus di 
 masa depan, anak harus disiapkan sebaik-baiknya. Salah satunya adalah dengan memperhatikan gizi seorang anak sedari ia lahir pertama kali di dunia.
 Kami sadar bahwa status gizi anak berhubungan erat dengan asupan makanan. Oleh karena itu, kami berupaya untuk membantu pemerintah dan masyarakat dengan mengedukasi para ibu dengan memberikan akses yang mudah untuk mengecek status gizi anak dan memberikan referensi asupan makanan bergizi yang sesuai dengan kebutuhan agar anak dapat tumbuh dan berkembang dengan baik.
