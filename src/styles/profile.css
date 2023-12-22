@@ -8,7 +8,6 @@
 .element-inner-container {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   padding: 11em 4em;
 }
 

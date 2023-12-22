@@ -4,8 +4,6 @@ import Main from './app';
 import LoadingCircle from './utils/loading';
 
 const app = new Main({
-  hamburgerBtn: document.getElementById('hamburger-button'),
-  navbarList: document.querySelector('#navbar .navbar-nav .list'),
   content: document.querySelector('#content'),
   goToTopBtn: document.querySelector('#on-top-btn'),
   btnNavGroup: document.querySelector('#navbar .extra'),

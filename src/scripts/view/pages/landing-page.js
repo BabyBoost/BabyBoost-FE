@@ -1,4 +1,3 @@
-/* eslint-disable no-empty */
 import changeDynamicContent from '../../utils/dynamic-content-changer';
 
 class LandingPage {
