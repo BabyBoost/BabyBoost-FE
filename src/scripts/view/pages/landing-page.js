@@ -347,6 +347,9 @@ class LandingPage {
 
   async InitializeEvent() {
     const Indicator = document.getElementById('waitingIndicatorCat');
+
+    this.SkipToContent();
+
     try {
       Indicator.style.display = 'flex';
 
@@ -394,6 +397,24 @@ class LandingPage {
         changeDynamicContent(this.dynamicContent, index + 1);
       });
     });
+  }
+
+  SkipToContent() {
+    const skipToContent = document.querySelector('#skip-to-content');
+
+    if (skipToContent) {
+      skipToContent.addEventListener('keydown', (event) => {
+        if (event.code === 'Enter' || event.code === 'Space') {
+          event.preventDefault(); // Prevent the default behavior of the key press
+
+          const contentElement = document.getElementById('main-content');
+
+          if (contentElement) {
+            contentElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the content
+          }
+        }
+      });
+    }
   }
 }
 
