@@ -61,6 +61,6 @@ Script
 
 [![Rekomendasi-Bahan-5.png](https://i.postimg.cc/LsfwCDzg/Rekomendasi-Bahan-5.png)](https://postimg.cc/R3Sgqcpv)
 
-## Tentang Kami
+## Kami
 
 [![Frame-129.png](https://i.postimg.cc/2yfZdkCB/Frame-129.png)](https://postimg.cc/nj0rptjH)
