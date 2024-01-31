@@ -32,7 +32,18 @@ Anggota Kelompok :
 <br>
 
 # Configuration
-```cmd
+
+To run **BabyBoost** loaclly, run this command on your git bash:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/warizmy/potoball.git
+```
+
+Windows :
+
+```bash
 git clone https://github.com/warizmy/BabyBoost.git
 ```
 
