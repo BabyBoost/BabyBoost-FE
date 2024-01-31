@@ -6,15 +6,13 @@
 <br>
 
 # About
-<p>Isu mengenai gizi anak menjadi hal penting sejak dulu hingga masa sekarang karena anak merupakan generasi penerus dan tumpuan masa depan bagi bangsa dan negara. Untuk mampu berfungsi sebagai generasi penerus di 
-masa depan, anak harus disiapkan sebaik-baiknya. Salah satunya adalah dengan memperhatikan gizi seorang anak sedari ia lahir pertama kali di dunia.
-Kami sadar bahwa status gizi anak berhubungan erat dengan asupan makanan. Oleh karena itu, kami berupaya untuk membantu pemerintah dan masyarakat dengan mengedukasi para ibu dengan memberikan akses yang mudah untuk mengecek status gizi anak dan memberikan referensi asupan makanan bergizi yang sesuai dengan kebutuhan agar anak dapat tumbuh dan berkembang dengan baik.
+<p>The issue of child nutrition has been important from the past to the present because children are the next generation and the foundation of the future for the nation and state. To be able to function as the next generation in the future, children must be prepared as well as possible. One way is to pay attention to a child's nutrition from the moment he is first born in the world. We are aware that children's nutritional status is closely related to food intake. Therefore, we are trying to help the government and society by educating mothers by providing easy access to check children's nutritional status and providing references for nutritious food intake that suits their needs so that children can grow and develop well.
 </p>
 <br>
 
 # Website (Desktop Only)
 
-Silahkan kunjungi Website kami : [BabyBoost](https://babyboost.netlify.app "BabyBoost").
+Visit our Website : [BabyBoost](https://babyboost.netlify.app "BabyBoost").
 <br>
 <br>
 
@@ -22,7 +20,7 @@ Silahkan kunjungi Website kami : [BabyBoost](https://babyboost.netlify.app "Baby
 
 Team ID : C523-PS027
 
-Anggota Kelompok :
+Members and the ID's :
 
 - F350YA231 – Muhammad Abid Al Khawarizmi
 - F350YA315 – Nofal Izwar Mansyuri
@@ -72,6 +70,6 @@ Script
 
 [![Rekomendasi-Bahan-5.png](https://i.postimg.cc/LsfwCDzg/Rekomendasi-Bahan-5.png)](https://postimg.cc/R3Sgqcpv)
 
-## Kami
+## Us
 
 [![Frame-129.png](https://i.postimg.cc/2yfZdkCB/Frame-129.png)](https://postimg.cc/nj0rptjH)
