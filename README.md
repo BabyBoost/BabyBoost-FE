@@ -21,13 +21,13 @@ To run **BabyBoost** loaclly, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/warizmy/BabyBoost-FE.git
+sudo git clone https://github.com/BabyBoost/BabyBoost-FE.git
 ```
 
 Windows :
 
 ```bash
-git clone https://github.com/warizmy/BabyBoost-FE.git
+git clone https://github.com/BabyBoost/BabyBoost-FE.git
 ```
 
 Script
