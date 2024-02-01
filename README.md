@@ -1,5 +1,4 @@
 # BabyBoost
-## Penuhi Gizi Anak Sekarang!
 
 <div align="center">
   <a href="https://postimg.cc/KRYGxLQy" target="_blank">
@@ -9,7 +8,6 @@
 <br>
 
 # Child nutrition monitoring website
----
 
 ## What I'm use here?
 
