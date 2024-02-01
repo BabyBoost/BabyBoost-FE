@@ -7,7 +7,7 @@
 </div>
 <br>
 
-# Child nutrition monitoring website
+## Child nutrition monitoring website
 
 ## What I'm use here?
 
@@ -21,13 +21,13 @@ To run **BabyBoost** loaclly, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/warizmy/BabyBoost-FrontEnd.git
+sudo git clone https://github.com/warizmy/BabyBoost-FE.git
 ```
 
 Windows :
 
 ```bash
-git clone https://github.com/warizmy/BabyBoost-FrontEnd.git
+git clone https://github.com/warizmy/BabyBoost-FE.git
 ```
 
 Script
